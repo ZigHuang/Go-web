@@ -1,30 +1,30 @@
-练习代码部分
+#详细功能
 
-## day1
+## Http-base
 
 - 搭建了框架的雏形
 
 - 简单学习了`net/http`库的使用
 
-## day2
+## Router
 
 - 抽取`router`,方便后续进行增强
 
 - 设计上下文`Context`,封装`请求体`和`响应体`，提供对JSON、HTML、String、Data等返回类型的支持
 
-## day3
+## Trie
 
 - 将day2抽取的`router`实现增强 
 
 - 使用**Trie前缀树**进行路由的匹配
 
-## day4
+## Group
 
 - 实现同一实例下不同路由的**分组控制**
 
 - 便于后续**中间件**对于对应的分组路由的**功能加强**
 
-## day5
+## miiddleware
 
 - 添加中间件支持
 
