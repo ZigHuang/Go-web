@@ -8,11 +8,11 @@ import (
 	"gee"
 )
 
-func onlyForApi1() gee.HandlerFunc {
+func specialMiddleware() gee.HandlerFunc {
 	return func(c *gee.Context) {
 		t := time.Now()
 		c.Fail(500, "Internal Server Error")
-		log.Printf("[%d] %s in %v for group api1", c.StatusCode, c.Req.RequestURI, time.Since(t))
+		log.Printf("[%d] %s in %v for SpecialMiddleware", c.StatusCode, c.Req.RequestURI, time.Since(t))
 	}
 }
 
@@ -25,9 +25,9 @@ func main() {
 	})
 
 	// 定义路由分组 /api1 下的单独中间件
-	// 此时 /api1 下有两个中间件, 一个Logger, 一个onlyForApi1
-	api1 := r.Group("")
-	api1.Use(onlyForApi1())
+	// 此时 /api1 下有两个中间件, 一个Logger, 一个specialMiddleware
+	api1 := r.Group("/api/special")
+	api1.Use(specialMiddleware())
 	{
 		api1.GET("/hello/:name", func(c *gee.Context) {
 			// expect /hello/zzguo

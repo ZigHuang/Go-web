@@ -10,14 +10,14 @@ import (
 Traceback:
         /usr/local/go/src/runtime/panic.go:1038
         /usr/local/go/src/runtime/panic.go:90
-        /Users/kokorozashiguohuang/GolandProjects/Gee-web/Practice/6-panic-recover/main.go:16
-        /Users/kokorozashiguohuang/GolandProjects/Gee-web/Practice/6-panic-recover/gee/Context.go:44
-        /Users/kokorozashiguohuang/GolandProjects/Gee-web/Practice/6-panic-recover/gee/recovery.go:37
-        /Users/kokorozashiguohuang/GolandProjects/Gee-web/Practice/6-panic-recover/gee/Context.go:44
-        /Users/kokorozashiguohuang/GolandProjects/Gee-web/Practice/6-panic-recover/gee/logger.go:15
-        /Users/kokorozashiguohuang/GolandProjects/Gee-web/Practice/6-panic-recover/gee/Context.go:44
-        /Users/kokorozashiguohuang/GolandProjects/Gee-web/Practice/6-panic-recover/gee/router.go:102
-        /Users/kokorozashiguohuang/GolandProjects/Gee-web/Practice/6-panic-recover/gee/gee.go:107
+        /Users/kokorozashiguohuang/GolandProjects/Go-web/Practice/6-panic-recover/main.go:16
+        /Users/kokorozashiguohuang/GolandProjects/Go-web/Practice/6-panic-recover/gee/Context.go:44
+        /Users/kokorozashiguohuang/GolandProjects/Go-web/Practice/6-panic-recover/gee/recovery.go:37
+        /Users/kokorozashiguohuang/GolandProjects/Go-web/Practice/6-panic-recover/gee/Context.go:44
+        /Users/kokorozashiguohuang/GolandProjects/Go-web/Practice/6-panic-recover/gee/logger.go:15
+        /Users/kokorozashiguohuang/GolandProjects/Go-web/Practice/6-panic-recover/gee/Context.go:44
+        /Users/kokorozashiguohuang/GolandProjects/Go-web/Practice/6-panic-recover/gee/router.go:102
+        /Users/kokorozashiguohuang/GolandProjects/Go-web/Practice/6-panic-recover/gee/gee.go:107
         /usr/local/go/src/net/http/server.go:2879
         /usr/local/go/src/net/http/server.go:1930
         /usr/local/go/src/runtime/asm_amd64.s:1582
