@@ -24,7 +24,7 @@
 
 - 便于后续**中间件**对于对应的分组路由的**功能加强**
 
-## miiddleware
+## Middleware
 
 - 添加中间件支持
 
@@ -34,4 +34,13 @@
 
 ![](img/middleware_1.png)
 
-则执行顺序为 part1 -> part3 -> header -> part4 -> part2
+> 则执行顺序为 part1 -> part3 -> header -> part4 -> part2
+
+
+## Panic-recover
+
+- 添加错误处理中间件
+- 模拟数组越界情况，打印堆栈中的错误信息，方便定位错误，如图：
+  ![](img/panic-recover_1.png)
+
+
