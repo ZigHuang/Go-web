@@ -5,17 +5,20 @@ import (
 	"strings"
 )
 
+// 路由节点
 type node struct {
-	pattern  string
-	part     string
-	children []*node
-	isWild   bool
+	pattern  string  // 尚未匹配的字符
+	part     string  // 当前匹配字符
+	children []*node // 子节点
+	isWild   bool    // 是否模糊匹配
 }
 
+// 打印路由信息
 func (n *node) String() string {
 	return fmt.Sprintf("node{pattern=%s, part=%s, isWild=%t}", n.pattern, n.part, n.isWild)
 }
 
+// 路由节点的插入
 func (n *node) insert(pattern string, parts []string, height int) {
 	if len(parts) == height {
 		n.pattern = pattern
@@ -31,6 +34,7 @@ func (n *node) insert(pattern string, parts []string, height int) {
 	child.insert(pattern, parts, height+1)
 }
 
+// 路由节点查询
 func (n *node) search(parts []string, height int) *node {
 	if len(parts) == height || strings.HasPrefix(n.part, "*") {
 		if n.pattern == "" {
@@ -61,6 +65,7 @@ func (n *node) travel(list *([]*node)) {
 	}
 }
 
+// 第一个匹配成功的节点，用于插入
 func (n *node) matchChild(part string) *node {
 	for _, child := range n.children {
 		if child.part == part || child.isWild {
@@ -70,6 +75,7 @@ func (n *node) matchChild(part string) *node {
 	return nil
 }
 
+// 所有匹配成功的节点，用于查找
 func (n *node) matchChildren(part string) []*node {
 	nodes := make([]*node, 0)
 	for _, child := range n.children {
