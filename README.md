@@ -3,7 +3,7 @@
 > 一个用 Go 语言实现一个简单的 Web 框架，设计思路基于[Gin](https://github.com/gin-gonic/gin)
 
 
-[功能实现](https://github.com/Super-ZZGuo/Gee-web/blob/main/Practice/README.md)较为简单，实现了一个Web框架最为简单基础的一些功能：
+[功能实现](https://github.com/ZigHuang/Go-web/blob/main/Practice/README.md)较为简单，实现了一个Web框架最为简单基础的一些功能：
 
 - 构建Context(上下文)来**解析请求**、**快速构建常用respone(响应)**
 - 使用Trie(前缀树)来进行**路由匹配**
